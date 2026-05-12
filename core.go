@@ -543,7 +543,7 @@ func getLocalFileInfo(path string) (string, string) {
 }
 
 func loadSources() []RepoSource {
-    defaultRepo := RepoSource{URL: "https://raw.githubusercontent.com/UincOS/Repositories", Branch: "stable"}
+    defaultRepo := RepoSource{URL: "https://raw.githubusercontent.com/UincOS/Packages", Branch: "stable"}
     if _, err := os.Stat(SourcesFile); os.IsNotExist(err) {
         return []RepoSource{defaultRepo}
     }

@@ -1,9 +1,10 @@
 # 🌌 UNA Package Manager
 > **© 2026 Altha36. Licensed under the Altha Project License (APL) v1.2.**
 
-![UNA License](https://img.shields.io/badge/license-APL_v1.2-%23f9a761?style=for-the-badge)
+![Altha36](https://img.shields.io/badge/Altha36-Project-feca74?style=for-the-badge&labelColor=202020)
+![License](https://img.shields.io/badge/license-APL_v1.2-feca74?style=for-the-badge)
+![UNA](https://img.shields.io/badge/UNA-007bff?style=for-the-badge&labelColor=202020)
 ![Go Version](https://img.shields.io/badge/go-1.24+-blue?style=for-the-badge&logo=go)
-![Platform](https://img.shields.io/badge/platform-UincOS-lightgrey?style=for-the-badge&logo=linux)
 
 **🚫 FORKING POLICY:** Forks of this project are **STRICTLY PROHIBITED**. This repository is provided for distribution, building, and evaluation purposes only. Any unauthorized copying, modification, or redistribution of this code is a violation of the Altha Project License (APL) v1.2.
 
@@ -49,6 +50,17 @@ UNA is built with a modular approach for easy maintenance:
 To compile UNA and install it on your system:
 
 ```bash
+# Before prepare the ambient for UNA
+sudo mkdir /opt/una
+sudo mkdir /etc/una
+echo '[
+  {
+    "url": "https://raw.githubusercontent.com/UincOS/Packages/",
+    "branch": "stable"
+  }
+]' | sudo tee /etc/una/sources.json > /dev/null
+
+
 # Clone the repository (for personal build/use only)
 git clone [https://github.com/Altha36/una.git](https://github.com/Altha36/una.git)
 cd una
@@ -56,6 +68,8 @@ cd una
 # Build the binary
 go build -o una
 
-# Install to system path
-sudo mv una /usr/local/bin/ or sudo mv /usr/bin
+# Install to system path with execution permissions 
+sudo install -m 755 una /usr/local/bin/
+# or
+sudo install -m 755 una /usr/bin/
 ```

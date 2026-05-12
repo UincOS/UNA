@@ -1,10 +1,15 @@
 # 🌌 UNA Package Manager
+> **© 2026 Altha36. Licensed under the Altha Project License (APL) v1.2.**
 
-![UNA License](https://img.shields.io/badge/license-MIT-orange-gold?style=for-the-badge)
-![Go Version](https://img.shields.io/badge/go-1.21%2B-blue?style=for-the-badge&logo=go)
-![Platform](https://img.shields.io/badge/platform-Debian%20%7C%20UincOS-lightgrey?style=for-the-badge&logo=linux)
+![UNA License](https://img.shields.io/badge/license-APL_v1.2-%23f9a761?style=for-the-badge)
+![Go Version](https://img.shields.io/badge/go-1.24+-blue?style=for-the-badge&logo=go)
+![Platform](https://img.shields.io/badge/platform-UincOS-lightgrey?style=for-the-badge&logo=linux)
 
-**UNA** is a next-generation, high-performance package manager built from the ground up in Go. Originally developed for the **UincOS** ecosystem, UNA bridges the gap between the simplicity of Debian and the bleeding-edge speed of Arch Linux.
+**🚫 FORKING POLICY:** Forks of this project are **STRICTLY PROHIBITED**. This repository is provided for distribution, building, and evaluation purposes only. Any unauthorized copying, modification, or redistribution of this code is a violation of the Altha Project License (APL) v1.2.
+
+---
+
+**UNA** is a next-generation, high-performance package manager built from the ground up in Go. Developed as the core of the **Altha36** ecosystem and **UincOS**, UNA bridges the gap between the simplicity of Debian and the bleeding-edge speed of Arch Linux.
 
 It is designed to be **atomic, isolated, and incredibly fast**, ensuring that your system stays clean while your applications run with native performance.
 
@@ -39,18 +44,18 @@ UNA is built with a modular approach for easy maintenance:
 
 ## 🛠️ Installation
 
+*Note: UNA is currently in active development. Use at your own risk.*
+
 To compile UNA and install it on your system:
 
 ```bash
-# Clone the repository
-git clone [https://github.com/UincOS-Team/una.git](https://github.com/UincOS-Team/una.git)
+# Clone the repository (for personal build/use only)
+git clone [https://github.com/Altha36/una.git](https://github.com/Altha36/una.git)
 cd una
 
 # Build the binary
 go build -o una
 
 # Install to system path
-sudo mv una /usr/local/bin/ or sudo mv una /usr/bin
+sudo mv una /usr/local/bin/ or sudo mv /usr/bin
 ```
-
-###### In development, so this is the final readme but the tool ins't ready yet!

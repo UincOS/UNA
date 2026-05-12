@@ -1,3 +1,10 @@
+/*
+ * Copyright (c) 2026 Altha36. All Rights Reserved.
+ * Licensed under the Altha Project License (APL) v1.2.
+ * This component is part of the Proprietary Core of Altha36.
+ * Unauthorized copying or distribution is strictly prohibited.
+ */
+
 package main
 
 import "github.com/pterm/pterm"

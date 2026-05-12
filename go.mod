@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Altha36. Licensed under Altha Project License (APL) v1.2.
+
 module una
 
 go 1.24.4

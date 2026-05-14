@@ -1,44 +1,44 @@
-Altha Project License (APL)
+Altha Source License (ASL)
 
-Version 1.2 — May 2026
+Version 2.0 — May 2026
+
 1. DEFINITIONS
 
-    "The Company": Refers to Altha36.
+    "The Licensor": The individual or entity granting the License and owning the copyright to the Work.
 
-    "The Work": Any software, source code, or assets provided by The Company.
+    "The Work": The software, source code, and original assets provided under this License.
 
-    "Proprietary Core": Original, closed-source components owned by The Company.
+    "Primary Service": The specific commercial application, product, or service designated by the Licensor in the accompanying NOTICE, LICENSE-SPECIFIC, or root documentation of the Work. If no designation is provided, it refers to any commercial activity that replicates the core functionality of the Licensor’s official offering.
 
-    "Fork": Any copy or derivative version of The Work created by a third party.
+    "External Code": Any third-party software, libraries, or kernels licensed under different terms that the Work interacts with or is bundled alongside.
 
-2. HYBRID ARCHITECTURE & COMPATIBILITY
+2. MODULARITY & LICENSE BOUNDARIES
 
-    2.1. Independent Status: Proprietary Core components are independent works. They are not subject to the licenses of bundled Third-Party Components (e.g., GPL/MIT).
+    2.1. Coexistence: This License permits the Work to be distributed and executed alongside External Code within the same environment or filesystem.
 
-    2.2. Modification Shield: Any optimizations or integration logic created by The Company are considered Proprietary unless stated otherwise.
+    2.2. Scope of Protection: This License applies exclusively to the Work. Coexistence with External Code under other licenses does not extend this License to the External Code, nor does it subject the Work to the terms of the External Code's license, provided the Work remains a distinct and separable component.
 
-3. FORKING, REDISTRIBUTION & PERSISTENCE
+    2.3. Modifications: Changes made to External Code files remain subject to the original licenses of those files. Original files created by the Licensor remain exclusively under this ASL v2.0.
 
-If a project's documentation (README) explicitly permits forking, the following conditions apply:
+3. TECHNICAL INTERACTION
 
-    3.1. License Inheritance: Any Fork or derivative of The Work must be distributed under this same Altha Project License (APL). You may not re-license The Work under any other license (e.g., MIT, GPL, Apache) without written consent from Altha36.
+    3.1. Connectivity: Interaction with the System Context or External Code via APIs, system calls, dynamic linking, or communication protocols does not constitute a derivative work under this License.
 
-    3.2. Mandatory Attribution: All original Copyright notices, headers, and "Powered by Altha36" or "Altha Project" mentions must remain intact in the source code and the final user interface.
+    3.2. Independence: The Work is intended to be treated as an independent module, maintaining its own licensing terms regardless of the underlying execution environment.
 
-    3.3. License Inclusion: A copy of this License and the original NOTICE file must be included in the root directory of any Fork.
+4. BRANDING & ANTI-COMPETITION
 
-4. COMPONENT STRIPPING ON COMMERCIAL USE
+    4.1. Trademark Restriction: This License grants no rights to the trade names, trademarks, or service marks of the Licensor. Any redistribution must remove official branding.
 
-    4.1. Non-Commercial Forks: Forks are permitted for personal/educational use provided they follow Section 3.
+    4.2. Competitive Restriction: You are strictly prohibited from using the Work or its derivatives to provide a commercial service or product that directly competes with the Primary Service as designated by the Licensor in accordance with Section 1, unless explicitly authorized by the Licensor under a separate commercial agreement.
 
-    4.2. Commercial Reversion: If you sell or distribute a commercial version of a software modified by The Company, you must strip all Altha Enhancements/Optimizations and revert the software to its original upstream version. You may not profit from Altha36’s proprietary logic or specific performance tweaks.
+    4.3. Attribution: All original copyright notices and authorship credits must be preserved in the source code and, where applicable, in the user interface.
 
-5. BRANDING & TRADEMARKS
+5. DISCLAIMER OF WARRANTY
+THE WORK IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT.
 
-    5.1. Exclusive Ownership: Names (Altha36, UincOS, Una, GatiHost) are trademarks of The Company.
+6. LIMITATION OF LIABILITY
+IN NO EVENT SHALL THE LICENSOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OR INABILITY TO USE THE WORK, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
 
-    5.2. Trademark Removal: While the APL license must stay, you must remove official logos and branding assets from Forks to avoid user confusion, unless the Fork is an official Altha36 distribution.
-
-6. NO WARRANTY & LIMITATION OF LIABILITY
-
-THE SOFTWARE IS PROVIDED "AS IS". ALTHA36 SHALL NOT BE LIABLE FOR ANY DAMAGES ARISING FROM THE USE OR REDISTRIBUTION OF THE WORK.
+7. GOVERNING LAW
+This License shall be governed by the laws of the jurisdiction where the Licensor resides or maintains its principal place of business, without regard to conflict of law principles.

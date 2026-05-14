@@ -1,0 +1,13 @@
+NOTICE - ASL v2.0
+
+Project: UNA
+Licensor: Altha36
+Contributors: Aaron
+
+RESTRICTED COMMERCIAL SCOPE:
+
+1. Commercial package repositories or app stores using the .una format.
+2. Paid operating systems using UNA as a primary package manager without a license.
+3. Commercial SaaS platforms replicating official UNA management tools.
+
+Any commercial use OUTSIDE of these specific niches is fully permitted under the ASL v2.0.

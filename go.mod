@@ -1,4 +1,5 @@
-// Copyright (c) 2026 Altha36. Licensed under Altha Project License (APL) v1.2.
+// SPDX-License-Identifier: ASL-2.0
+// Copyright (c) 2026 [Your Name/Entity]. All rights reserved.
 
 module una
 

@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: ASL-2.0
-// Copyright (c) 2026 [Your Name/Entity]. All rights reserved.
+// Copyright (c) 2026 Altha36. All rights reserved.
 
 package main
 
@@ -22,14 +22,17 @@ func main() {
 	for i := 0; i < len(args); i++ {
 		arg := args[i]
 		switch arg {
-		case "-d": debugMode = true
-		case "-y": autoYes = true
+		case "-d":
+			debugMode = true
+		case "-y":
+			autoYes = true
 		case "-b":
 			if i+1 < len(args) {
 				targetBranch = args[i+1]
 				i++
 			}
-		default: cleanArgs = append(cleanArgs, arg)
+		default:
+			cleanArgs = append(cleanArgs, arg)
 		}
 	}
 
@@ -42,7 +45,7 @@ func main() {
 
 	command := cleanArgs[0]
 	writeCommands := map[string]bool{"-i": true, "install": true, "-u": true, "update": true, "-r": true, "remove": true, "-f": true, "fix": true, "add-repo": true}
-	
+
 	if writeCommands[command] {
 		if err := acquireLock(); err != nil {
 			pterm.Error.Println(err)
@@ -52,13 +55,21 @@ func main() {
 	}
 
 	switch command {
-	case "-i", "install": handleInstall(cleanArgs, false, false)
-	case "-u", "update":  handleInstall(cleanArgs, true, false)
-	case "-f", "fix":     handleInstall(cleanArgs, true, true)
-	case "-r", "remove":  handleRemove(cleanArgs)
-	case "add-repo":      handleAddRepo(cleanArgs)
-	case "-l", "list":    listPackages()
-	case "-info":         showAppInfo(cleanArgs[1])
-	default:              showHelp()
+	case "-i", "install":
+		handleInstall(cleanArgs, false, false)
+	case "-u", "update":
+		handleInstall(cleanArgs, true, false)
+	case "-f", "fix":
+		handleInstall(cleanArgs, true, true)
+	case "-r", "remove":
+		handleRemove(cleanArgs)
+	case "add-repo":
+		handleAddRepo(cleanArgs)
+	case "-l", "list":
+		listPackages()
+	case "-info", "information":
+		showAppInfo(cleanArgs[1])
+	default:
+		showHelp()
 	}
 }

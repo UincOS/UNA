@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: ASL-2.0
-// Copyright (c) 2026 [Your Name/Entity]. All rights reserved.
+// Copyright (c) 2026 Altha36. All rights reserved.
 
 module una
 

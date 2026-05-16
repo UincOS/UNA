@@ -1,25 +1,38 @@
 // SPDX-License-Identifier: ASL-2.0
-// Copyright (c) 2026 [Your Name/Entity]. All rights reserved.
+// Copyright (c) 2026 Altha36. All rights reserved.
 
 package main
 
 import (
+	"os"
+	"io"
 	"fmt"
 	"strconv"
-    "crypto/sha256"
-    "encoding/hex"
 	"strings"
+	"syscall"
+	"crypto/sha256"
+	"encoding/hex"
 	"encoding/json"
 	"path/filepath"
-	"syscall"
-    "io"
-    "os"
+	"github.com/pterm/pterm"
 )
 
+func askConfirmation(message string) bool {
+	if autoYes {
+		return true
+	}
+	result, _ := pterm.DefaultInteractiveConfirm.WithDefaultText(message).Show()
+	return result
+}
+
 func getActionName(isUpdate, force bool) string {
-    if force { return "reinstallation" }
-    if isUpdate { return "update" }
-    return "installation"
+	if force {
+		return "reinstallation"
+	}
+	if isUpdate {
+		return "update"
+	}
+	return "installation"
 }
 
 func verifyChecksum(filePath string, expectedHash string) error {
@@ -34,7 +47,9 @@ func verifyChecksum(filePath string, expectedHash string) error {
 }
 
 func acquireLock() error {
-	if _, err := os.Stat(LockFile); err == nil { return fmt.Errorf("UNA is already running") }
+	if _, err := os.Stat(LockFile); err == nil {
+		return fmt.Errorf("UNA is already running")
+	}
 	return os.WriteFile(LockFile, []byte(strconv.Itoa(os.Getpid())), 0644)
 }
 
@@ -90,13 +105,32 @@ func isFileOk(path string, expectedSize int64) bool {
 }
 
 func getActionVerb(isUpdate, force bool) string {
-    if force { return "Fixing" }
-    if isUpdate { return "Updating" }
-    return "Installing"
+	if force {
+		return "Fixing"
+	}
+	if isUpdate {
+		return "Updating"
+	}
+	return "Installing"
 }
 
 func getActionState(isUpdate, force bool) string {
-    if force { return "fixed" }
-    if isUpdate { return "updated" }
-    return "installed"
+	if force {
+		return "fixed"
+	}
+	if isUpdate {
+		return "updated"
+	}
+	return "installed"
+}
+
+func verifyStorage(packageBytes int64, storageBytes uint64) bool {
+	if uint64(packageBytes) > storageBytes {
+		return true
+	}
+	return false
+}
+
+func toMegaByte(value uint64) uint64 {
+	return value/1024/1024
 }

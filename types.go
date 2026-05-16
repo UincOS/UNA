@@ -1,35 +1,7 @@
 // SPDX-License-Identifier: ASL-2.0
-// Copyright (c) 2026 [Your Name/Entity]. All rights reserved.
+// Copyright (c) 2026 Altha36. All rights reserved.
 
 package main
-
-import "github.com/pterm/pterm"
-
-var (
-	debugMode    = false
-	autoYes      = false
-	targetBranch = "stable"
-)
-
-const (
-	StoreBase    = "/opt/una"
-	BinPath      = "/usr/local/bin"
-	Applications = "/usr/share/applications"
-	DefaultIcon  = "/usr/share/defaults/icon.png"
-	LockFile     = "/tmp/una.lock"
-	ConfigDir    = "/etc/una"
-	SourcesFile  = "/etc/una/sources.json"
-)
-
-var unaBarStyle = pterm.DefaultProgressbar.
-	WithBarStyle(pterm.NewStyle(pterm.FgCyan)).
-	WithTitleStyle(pterm.NewStyle(pterm.FgLightCyan)).
-	WithBarCharacter("━").
-	WithLastCharacter(" ").
-	WithBarFiller("─").
-	WithShowCount(false).
-	WithShowPercentage(true).
-	WithRemoveWhenDone(false)
 
 type Metadata struct {
 	Name         string   `json:"name"`
@@ -39,6 +11,7 @@ type Metadata struct {
 	Author       string   `json:"author"`
 	Website      string   `json:"website"`
 	License      string   `json:"license"`
+	Category     string   `json:"category"`
 	Dependencies []string `json:"dependencies"`
 }
 
